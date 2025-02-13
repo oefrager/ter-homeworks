@@ -26,8 +26,11 @@
 1. Изучите проект.
 2. Инициализируйте проект, выполните код. 
 
+![изображение](https://github.com/user-attachments/assets/6864c54a-b82f-47c9-a1d1-72a97a42b9ca)
 
-Приложите скриншот входящих правил «Группы безопасности» в ЛК Yandex Cloud .
+или
+
+![изображение](https://github.com/user-attachments/assets/33d6ae75-d75c-40e2-b073-07ce2952cfb7)
 
 ------
 
