@@ -1,8 +1,8 @@
 resource "local_file" "hosts_template" {
   content = templatefile("${path.module}/hosts.tftpl", {
     webservers   = yandex_compute_instance.count
-    bdservers    = yandex_compute_instance.db
-    disk_servers = yandex_compute_instance.storage
+    databases    = yandex_compute_instance.db
+    storage      = yandex_compute_instance.storage
   })
   filename = "${abspath(path.module)}/hosts.cfg"
 }
