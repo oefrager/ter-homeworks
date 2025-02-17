@@ -31,15 +31,13 @@ variable "vpc_name" {
   description = "VPC network&subnet name"
 }
 
-###VM web vars
-
 variable  "vm_image" {
   type        = string
   default     = "ubuntu-2004-lts"
   description = "ubuntu release name"
 }
 
-variable "vms_resources" {
+variable "vms_resources" {      ###VM WEB & STORAGE vars
   type = map(object({
     platform_id    = string
     type_hdd       = string
@@ -54,24 +52,21 @@ variable "vms_resources" {
       cores          = 2
       memory         = 1
       core_fraction  = 5
-    } #,
-  #  db = {
-  #  name           = "netology-develop-platform-db"
-  #    platform_id    = "standard-v3"
-  #    type_hdd       = "network-hdd"
-  #    cores          = 2
-  #    memory         = 2
-  #    core_fraction  = 20
-  #  }
+    },
+    disk = {
+      platform_id    = "standard-v1"
+      type_hdd       = "network-hdd"
+      cores          = 2
+      memory         = 2
+      core_fraction  = 20
+    }
   }
 }
 
-###VM BD vars
-
-variable "vms_resources_db" {
+variable "vms_resources_db" {     ###VM BD vars
   type = map(object({
     name           = string
-    hostname       = string
+    platform_id    = string
     disk_volume    = number
     cores          = number
     memory         = number
@@ -80,7 +75,7 @@ variable "vms_resources_db" {
   default = {
     main = {
       name           = "main"
-      hostname       = "main"
+      platform_id    = "standard-v1"
       disk_volume    = 5
       cores          = 2
       memory         = 1
@@ -88,11 +83,17 @@ variable "vms_resources_db" {
     },
     replica = {
       name           = "replica"
-      hostname       = "replica"
+      platform_id    = "standard-v1"
       disk_volume    = 10
       cores          = 4
       memory         = 2
       core_fraction  = 20
     }
   }
+}
+
+variable "disk_volume" {        ###DISK vars
+  type        = string
+  default     = 1
+  description = "additional disk size"
 }

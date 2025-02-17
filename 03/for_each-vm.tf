@@ -3,10 +3,9 @@ data "yandex_compute_image" "ubuntu_db" {
 }
 
 resource "yandex_compute_instance" "db" {
-  platform_id = var.vms_resources.web.platform_id
   for_each    = var.vms_resources_db
   name        = each.value.name
-  hostname    = each.value.hostname
+  platform_id = each.value.platform_id
     resources {
       cores         = each.value.cores
       memory        = each.value.memory

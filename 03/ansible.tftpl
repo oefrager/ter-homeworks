@@ -1,0 +1,10 @@
+[webservers]
+web-1 ansible_host=<внешний ip-адрес> fqdn=<полное доменное имя виртуальной машины>
+web-2 ansible_host=<внешний ip-адрес> fqdn=<полное доменное имя виртуальной машины>
+
+[databases]
+main ansible_host=<внешний ip-адрес> fqdn=<полное доменное имя виртуальной машины>
+replica ansible_host<внешний ip-адрес> fqdn=<полное доменное имя виртуальной машины>
+
+[storage]
+storage ansible_host=<внешний ip-адрес> fqdn=<полное доменное имя виртуальной машины>
