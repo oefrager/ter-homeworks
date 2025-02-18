@@ -5,6 +5,7 @@ data "yandex_compute_image" "ubuntu_db" {
 resource "yandex_compute_instance" "db" {
   for_each    = var.vms_resources_db
   name        = each.value.name
+  hostname    = each.value.hostname
   platform_id = each.value.platform_id
     resources {
       cores         = each.value.cores

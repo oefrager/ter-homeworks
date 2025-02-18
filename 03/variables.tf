@@ -66,6 +66,7 @@ variable "vms_resources" {      ###VM WEB & STORAGE vars
 variable "vms_resources_db" {     ###VM BD vars
   type = map(object({
     name           = string
+    hostname       = string
     platform_id    = string
     disk_volume    = number
     cores          = number
@@ -75,6 +76,7 @@ variable "vms_resources_db" {     ###VM BD vars
   default = {
     main = {
       name           = "main"
+      hostname       = "main"
       platform_id    = "standard-v1"
       disk_volume    = 5
       cores          = 2
@@ -83,6 +85,7 @@ variable "vms_resources_db" {     ###VM BD vars
     },
     replica = {
       name           = "replica"
+      hostname       = "replica"
       platform_id    = "standard-v1"
       disk_volume    = 10
       cores          = 4
