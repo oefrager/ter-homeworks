@@ -135,6 +135,8 @@
 ${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"] platform_id=${i["platform_id "]}}
 %{~ endfor ~}
 ```
+Не правильно установлен символ "}". Правильный код:
+         ```${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"]} platform_id=${i["platform_id"]}```
 
 ### Задание 9* (необязательное)
 Напишите  terraform выражения, которые сформируют списки:
