@@ -77,4 +77,6 @@ ${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"] platform
          ${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"]} platform_id=${i["platform_id"]}
 
 ### Задание 9* (необязательное)
-      [for i in range(1,100) : i]
+         
+         [for i in range(1,100) : format("%s%s", "rc", i)]
+      
