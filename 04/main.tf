@@ -20,12 +20,11 @@ module "marketing" {
   public_ip      = true
 
   labels = { 
-    owner   = "o.guryanov",
-    project = "accounting"
+    project = "marketing"
   }
   
   metadata = {
-  #  user-data          = data.template_file.cloudinit.rendered #Для демонстрации №3
+    user-data          = data.template_file.userdata.rendered
     serial-port-enable = 1
   }
 }
@@ -42,12 +41,11 @@ module "analytics" {
   public_ip      = true
 
   labels = { 
-    owner   = "o.guryanov",
-    project = "accounting"
+    project = "analytics"
   }
 
   metadata = {
-  #  user-data          = data.template_file.cloudinit.rendered #Для демонстрации №3
+    user-data          = data.template_file.userdata.rendered
     serial-port-enable = 1
   }
 }
