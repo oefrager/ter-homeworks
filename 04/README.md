@@ -2,13 +2,15 @@
 
 ### Задание 1
 
-1. Возьмите из [демонстрации к лекции готовый код](https://github.com/netology-code/ter-homeworks/tree/main/04/demonstration1) для создания с помощью двух вызовов remote-модуля -> двух ВМ, относящихся к разным проектам(marketing и analytics) используйте labels для обозначения принадлежности.  В файле cloud-init.yml необходимо использовать переменную для ssh-ключа вместо хардкода. Передайте ssh-ключ в функцию template_file в блоке vars ={} .
+1. Создаем с помощью двух вызовов remote-модуля -> две ВМ, относящихся к разным проектам(marketing и analytics) используйте labels для обозначения принадлежности [main.tf](main.tf).  В файле cloud-init.yml необходимо используем переменную для ssh-ключа вместо хардкода. Передаем ssh-ключ в функцию template_file в блоке vars ={}: [userdata.tf](userdata.tf)
 
 
-3. Добавляем в файл [cloud-init.yml](cloud-init.yml]) установку nginx.
-4. Предоставьте скриншот подключения к консоли и вывод команды ```sudo nginx -t```, скриншот консоли ВМ yandex cloud с их метками. Откройте terraform console и предоставьте скриншот содержимого модуля. Пример: > module.marketing_vm
+2. Добавляем в файл [cloud-init.yml](cloud-init.yml) установку nginx.
+3. Предоставьте скриншот подключения к консоли и вывод команды ```sudo nginx -t```, скриншот консоли ВМ yandex cloud с их метками. Откройте terraform console и предоставьте скриншот содержимого модуля. Пример: > module.marketing_vm
 
+   ![изображение](https://github.com/user-attachments/assets/87cb397b-0a4f-4bff-af98-f8e51e40c3ca)
 
+   ![изображение](https://github.com/user-attachments/assets/8798f443-9272-4dac-a1de-e8c9417ecdc3)   ![изображение](https://github.com/user-attachments/assets/c981eeb0-fb12-4a7f-b775-435dd6655bf9)
 
 ### Задание 2
 
