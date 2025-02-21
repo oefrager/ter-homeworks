@@ -8,9 +8,10 @@
 2. Добавляем в файл [cloud-init.yml](cloud-init.yml) установку nginx.
 3. Предоставьте скриншот подключения к консоли и вывод команды ```sudo nginx -t```, скриншот консоли ВМ yandex cloud с их метками. Откройте terraform console и предоставьте скриншот содержимого модуля. Пример: > module.marketing_vm
 
-   ![изображение](https://github.com/user-attachments/assets/87cb397b-0a4f-4bff-af98-f8e51e40c3ca)
+   ![изображение](https://github.com/user-attachments/assets/0fba25c2-86f5-44c2-9828-be4ddc887f05)
 
-   ![изображение](https://github.com/user-attachments/assets/8798f443-9272-4dac-a1de-e8c9417ecdc3)   ![изображение](https://github.com/user-attachments/assets/c981eeb0-fb12-4a7f-b775-435dd6655bf9)
+   ![изображение](https://github.com/user-attachments/assets/beb887b7-cadb-4c06-9d94-a3f234c7e109)   ![изображение](https://github.com/user-attachments/assets/e6dba3e9-1045-4536-acf2-b886dd3a8a9e)
+
 
 ### Задание 2
 
