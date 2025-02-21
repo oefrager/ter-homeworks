@@ -1,6 +1,6 @@
 #cloud-config
 users:
-  - name: goi
+  - name: $(username)
     groups: sudo
     shell: /bin/bash
     sudo: ["ALL=(ALL) NOPASSWD:ALL"]

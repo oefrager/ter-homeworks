@@ -38,6 +38,19 @@ variable "vms_ssh_root_key" {
   description = "ssh-keygen -t ed25519"
 }
 
+variable "vms_ssh_root_name" {
+  type        = string
+  default     = "ubuntu"
+  description = "name user for ssh-keygen"
+}
+
+variable "image_family" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "name image os"
+}
+
+
 
 ###example vm_web var
 variable "vm_web_name" {
