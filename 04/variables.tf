@@ -33,15 +33,9 @@ variable "vpc_name" {
 
 ###common vars
 variable "vms_ssh_root_key" {
-  type        = string
-  default     = "~/.ssh/id_ed25519.pub"
+  type        = list(string)
+  default     = ["~/.ssh/id_ed25519.pub"]
   description = "ssh-keygen -t ed25519"
-}
-
-variable "vms_ssh_root_name" {
-  type        = string
-  default     = "ubuntu"
-  description = "name user for ssh-keygen"
 }
 
 variable "image_family" {

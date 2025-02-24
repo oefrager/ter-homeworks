@@ -27,7 +27,6 @@ module "marketing" {
     user-data          = data.template_file.cloudinit.rendered
     serial-port-enable = 1
   }
-#  metadata = local.metadata
 }
 
 module "analytics" {
@@ -45,10 +44,15 @@ module "analytics" {
     project = "analytics"
   }
 
-#  metadata = local.metadata
-
   metadata = {
     user-data          = data.template_file.cloudinit.rendered
     serial-port-enable = 1
+  }
+}
+
+data "template_file" "cloudinit" {
+  template = file("./cloud-init.yml")
+  vars     = {
+    ssh-authorized-keys = file(var.vms_ssh_root_key[0])
   }
 }
