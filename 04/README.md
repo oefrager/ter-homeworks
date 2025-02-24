@@ -2,7 +2,7 @@
 
 ### Задание 1
 
-1. Создаем с помощью двух вызовов remote-модуля -> две ВМ, относящихся к разным проектам(marketing и analytics) используйте labels для обозначения принадлежности [main.tf](main.tf).  В файле cloud-init.yml используем переменную для ssh-ключа вместо хардкода. Передаем ssh-ключ в функцию template_file в блоке vars ={}: [userdata.tf](userdata.tf)
+1. Создаем с помощью двух вызовов remote-модуля -> две ВМ, относящихся к разным проектам (marketing и analytics) используйте labels для обозначения принадлежности [main.tf](main.tf).  В файле cloud-init.yml используем переменную для ssh-ключа вместо хардкода. Передаем ssh-ключ в функцию template_file в блоке vars ={}: [userdata.tf](userdata.tf)
 
 
 2. Добавляем в файл [cloud-init.yml](cloud-init.yml) установку nginx.
@@ -18,7 +18,7 @@
 ### Задание 2
 
 1. Пишем локальный модуль vpc, который будет создавать 2 ресурса: **одну** сеть и **одну** подсеть в зоне, объявленной при вызове модуля, например: ```ru-central1-a```:
-      Создаем в каталоге module/vpc файл [main.tf](vpc/main.tf)
+         Для этого создаем в каталоге module/vpc файл [main.tf](vpc/main.tf)
 
 2. Передаем в модуль [переменные](vpc/variables.tf) с названием сети, zone и v4_cidr_blocks.
 3. Модуль должен возвращать в root module с помощью [output](vpc/output.tf) информацию о yandex_vpc_subnet. Пришлите скриншот информации из terraform console о своем модуле. Пример: > module.vpc_dev  
