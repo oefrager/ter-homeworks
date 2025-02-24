@@ -2,7 +2,7 @@
 
 ### Задание 1
 
-1. Создаем с помощью двух вызовов remote-модуля -> две ВМ, относящихся к разным проектам(marketing и analytics) используйте labels для обозначения принадлежности [main.tf](main.tf).  В файле cloud-init.yml необходимо используем переменную для ssh-ключа вместо хардкода. Передаем ssh-ключ в функцию template_file в блоке vars ={}: [userdata.tf](userdata.tf)
+1. Создаем с помощью двух вызовов remote-модуля -> две ВМ, относящихся к разным проектам(marketing и analytics) используйте labels для обозначения принадлежности [main.tf](main.tf).  В файле cloud-init.yml используем переменную для ssh-ключа вместо хардкода. Передаем ssh-ключ в функцию template_file в блоке vars ={}: [userdata.tf](userdata.tf)
 
 
 2. Добавляем в файл [cloud-init.yml](cloud-init.yml) установку nginx.
