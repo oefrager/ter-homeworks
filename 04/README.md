@@ -23,19 +23,10 @@
 2. Передаем в модуль [переменные](vpc/variables.tf) с названием сети, zone и v4_cidr_blocks.
 3. Модуль должен возвращать в root module с помощью [output](vpc/output.tf) информацию о yandex_vpc_subnet. Пришлите скриншот информации из terraform console о своем модуле. Пример: > module.vpc_dev  
 
+      ![image](https://github.com/user-attachments/assets/294a9b3b-5d8e-4c0b-9fd1-6b447cfe2dc0)
+
 4. Замените ресурсы yandex_vpc_network и yandex_vpc_subnet созданным модулем. Не забудьте передать необходимые параметры сети из модуля vpc в модуль с виртуальной машиной.
 5. Сгенерируйте документацию к модулю с помощью terraform-docs.
- 
-Пример вызова
-
-```
-module "vpc_dev" {
-  source       = "./vpc"
-  env_name     = "develop"
-  zone = "ru-central1-a"
-  cidr = "10.0.1.0/24"
-}
-```
 
 ### Задание 3
 1. Выведите список ресурсов в стейте.
