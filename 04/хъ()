@@ -29,7 +29,7 @@
 
       ![image](https://github.com/user-attachments/assets/707ac88e-7593-4985-8d8e-6f267adc5eae)
 
-5. Сгенерируйте документацию к модулю с помощью terraform-docs.
+5. Генерируем документацию к модулю с помощью terraform-docs: "terraform-docs markdown table . --output-file Readme.md": [README.md](vpc/README.md)
 
 ### Задание 3
 1. Выведите список ресурсов в стейте.
