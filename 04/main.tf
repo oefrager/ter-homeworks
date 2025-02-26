@@ -8,9 +8,9 @@ module "vpc_develop" {
 module "marketing" {
   source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
   env_name       = "marketing"
-  network_id     = module.vpc_develop.vpc_network
+  network_id     = module.vpc_develop.vpc_network.id
   subnet_zones   = [var.default_zone]
-  subnet_ids     = [module.vpc_develop.vps_subnet]
+  subnet_ids     = [module.vpc_develop.vpc_subnet.id]
   instance_name  = "webserv"
   instance_count = 1
   image_family   = var.image_family
@@ -29,9 +29,9 @@ module "marketing" {
 module "analytics" {
   source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
   env_name       = "analytics"
-  network_id     = module.vpc_develop.vpc_network
+  network_id     = module.vpc_develop.vpc_network.id
   subnet_zones   = [var.default_zone]
-  subnet_ids     = [module.vpc_develop.vps_subnet]
+  subnet_ids     = [module.vpc_develop.vpc_subnet.id]
   instance_name  = "stage"
   instance_count = 1
   image_family   = var.image_family
