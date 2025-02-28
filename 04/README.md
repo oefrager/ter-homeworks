@@ -37,22 +37,18 @@
       ![изображение](https://github.com/user-attachments/assets/677f70cb-05bb-4b83-9b38-99a6018cf490)
 
 2. Полностью удалите из стейта модуль vpc.
-
-      ![изображение](https://github.com/user-attachments/assets/8a0b5cc6-ceb3-4fe4-a23a-36a635e3b437)
-      
 3. Полностью удалите из стейта модуль vm.
 
-      ![изображение](https://github.com/user-attachments/assets/fc2b1f32-5071-492c-ab06-d3b39954fd7f)
+      ![изображение](https://github.com/user-attachments/assets/2a582da2-57e8-462e-8fc7-5323caddeaac)
+
 
 4. Импортируйте всё обратно. Проверьте terraform plan. Значимых(!!) изменений быть не должно.
 
-      ![изображение](https://github.com/user-attachments/assets/55af0ea2-3445-4547-8f5c-43a434fd7fe4)
+      ![изображение](https://github.com/user-attachments/assets/74fec860-d4e5-4ced-9b81-d3981cffc747)
 
-      ![изображение](https://github.com/user-attachments/assets/71fde58e-d794-460d-a385-afcd0000f0fe)
+      ![изображение](https://github.com/user-attachments/assets/172ca05f-61b1-403b-8cc3-ba015314eac2)
+      
 
-      ![изображение](https://github.com/user-attachments/assets/7213cee4-c4b1-4a81-a9d7-b58b364c292e)
-
-      ![изображение](https://github.com/user-attachments/assets/5f688648-8da4-49ec-8db3-f0ced98fb7bc)
 
 Приложите список выполненных команд и скриншоты процессы.
 
