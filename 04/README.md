@@ -77,8 +77,9 @@ module "vpc_dev" {
 }
 ```
 
-Предоставьте код, план выполнения, результат из консоли YC.
+Получаем следующий [код](vpc_subnets) и результат из консоли YC:
 
    ![изображение](https://github.com/user-attachments/assets/548425e2-92b1-443d-a09f-34756deccb64)
 
-   ![изображение](https://github.com/user-attachments/assets/9f3e0689-f6bb-4b58-9bde-9f00649b3c01)
+   ![изображение](https://github.com/user-attachments/assets/ff1dc7e4-7713-43ba-88d9-b4fda2aaf432)
+
