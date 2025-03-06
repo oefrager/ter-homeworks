@@ -23,10 +23,10 @@ CHECKOV:
         Ensure Terraform module sources use a tag with a version number    не указана версия в источнике модуля
 TFLint:
         
-        Warning: Missing version constraint for provider "yandex" in `required_providers`          не указана версия провайдер
-        Warning: [Fixable] variable "vms_ssh_root_key" is declared but not used                    исключить из переменных root_key. Так же: vm_web_name, db_name, root_key
-        Warning: Module source "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main" uses a default branch as ref используется ветка в git, указывать хеш коммита
-        Warning: [Fixable] variable "public_key" is declared but not used                          объявлена переменная но не используется
+        Warning: Missing version constraint for provider "yandex" in `required_providers`    не указана версия провайдер
+        Warning: [Fixable] variable "vms_ssh_root_key" is declared but not used              исключить из переменных root_key. Так же: vm_web_name, db_name, root_key
+        Warning: Module source "git::https://github.com/......" uses a default branch as ref используется ветка в git, указывать хеш коммита
+        Warning: [Fixable] variable "public_key" is declared but not used                    объявлена переменная но не используется
 ------
 
 ### Задание 2
