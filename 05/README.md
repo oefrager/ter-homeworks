@@ -33,11 +33,24 @@ TFLint:
 
 1. Возьмите ваш GitHub-репозиторий с **выполненным ДЗ 4** в ветке 'terraform-04' и сделайте из него ветку 'terraform-05'.
 2. Повторите демонстрацию лекции: настройте YDB, S3 bucket, yandex service account, права доступа и мигрируйте state проекта в S3 с блокировками. Предоставьте скриншоты процесса в качестве ответа.
-3. Закоммитьте в ветку 'terraform-05' все изменения.
-4. Откройте в проекте terraform console, а в другом окне из этой же директории попробуйте запустить terraform apply.
-5. Пришлите ответ об ошибке доступа к state.
-6. Принудительно разблокируйте state. Пришлите команду и вывод.
 
+    ![изображение](https://github.com/user-attachments/assets/f2065710-7279-4c80-a170-2490705a4847)
+    ![изображение](https://github.com/user-attachments/assets/0ab94349-1570-4d32-b8a0-2f32bea82c16)
+        
+Выполняем команду: ``` terraform init -backend-config="access_key=..." -backend-config="..." ```
+
+   ![изображение](https://github.com/user-attachments/assets/b7ad2545-683a-46b1-bc9f-995d72b85d04)
+   ![изображение](https://github.com/user-attachments/assets/9798cb27-6bd4-4a7f-b86b-e2d9d376bbe5)
+
+4. Закоммитьте в ветку 'terraform-05' все изменения.
+5. Откройте в проекте terraform console, а в другом окне из этой же директории попробуйте запустить terraform apply.
+6. Пришлите ответ об ошибке доступа к state.
+
+   ![изображение](https://github.com/user-attachments/assets/797a2783-c04c-4c29-8cd8-5dc26a533d96)
+   
+7. Принудительно разблокируйте state. Пришлите команду и вывод.
+
+   ![изображение](https://github.com/user-attachments/assets/1ba4ce2f-c8a0-4123-93d3-17571f44b27a)
 
 ------
 ### Задание 3  
