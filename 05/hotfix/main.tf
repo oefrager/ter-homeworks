@@ -7,8 +7,7 @@ module "vpc_dev" {
 }
 
 module "marketing" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=0049a0c47c805c2552e16f7bca2581a7feae0f14"
-  version        = "1.0.0"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
   env_name       = "marketing"
   network_id     = module.vpc_dev.vpc_network.id
   subnet_zones   = [var.default_zone]

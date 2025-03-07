@@ -4,6 +4,10 @@ terraform {
       source = "yandex-cloud/yandex"
       version = ">= 0.130.0"
     }
+    template = {
+      source  = "hashicorp/template"
+      version = "~> 2"
+    }
   }
   backend "s3" {
     endpoints = { s3 = "https://storage.yandexcloud.net" }
@@ -20,20 +24,13 @@ terraform {
     dynamodb_table    = "tfstate-lock"
   }
   required_version = "~>1.8.4"
+
 }
 
 provider "yandex" {
+#  token     = var.token
   cloud_id  = var.cloud_id
   folder_id = var.folder_id
   service_account_key_file = file("~/.authorized_key.json")
   zone      = var.default_zone
-}
-
-terraform {
-  required_providers {
-    template = {
-      source  = "hashicorp/template"
-      version = "~> 2"
-    }
-  }
 }
