@@ -1,3 +1,4 @@
+  GNU nano 8.1                                                                               /home/goi/Netology_hw/ter-homeworks/05/hotfix/main.tf                                                                                        
 module "vpc_dev" {
   source       = "./modules/vpc"
   env_name     = "develop"
@@ -26,4 +27,3 @@ module "marketing" {
     serial-port-enable = 1
   }
 }
-
