@@ -60,3 +60,27 @@ variable "vm_db_name" {
   description = "example vm_db_ prefix"
 }
 
+
+###validation test
+variable "ip_address" {
+  description = "ip-адрес"
+  type        = string
+  default     = "1920.1680.0.1"  # wrong IP address
+#  default     = "192.168.0.0/24"    # validate IP address
+  validation {
+    condition     = can(cidrhost(var.ip_address, 1))
+    error_message = "Неверный ip-адрес"
+  }
+}
+
+variable "ip_address_list" {
+  description = "список ip-адресов"
+  type        = list(string)
+  default     = ["192.168.0.1", "1.1.1.1", "1270.0.0.1"]   # wrong list IP address
+#  default     = ["192.168.0.1", "1.1.1.1", "127.0.0.1"]    # validate list IP address
+  validation {
+    condition = alltrue([for ip in var.ip_address_list: can(regex("^((25[0-5]|(2[0-4]|1\\d|[1-9]|)\\d)\\.?\\b){4}$", ip))])
+    error_message = "Неверный список ip-адресов"
+  }
+}
+
