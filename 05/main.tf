@@ -26,4 +26,3 @@ module "marketing" {
     serial-port-enable = 1
   }
 }
-
