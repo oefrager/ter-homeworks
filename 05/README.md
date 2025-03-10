@@ -64,7 +64,7 @@ TFLint:
 ------
 ### Задание 4
 
-1. Напишите переменные с валидацией и протестируйте их, заполнив default верными и неверными значениями. Предоставьте скриншоты проверок из terraform console. 
+1. Пишем [переменные](variables.tf) с валидацией и протестируйте их, заполнив default верными и неверными значениями. Предоставьте скриншоты проверок из terraform console. 
 
 - type=string, description="ip-адрес" — проверка, что значение переменной содержит верный IP-адрес с помощью функций cidrhost() или regex(). Тесты:  "192.168.0.1" и "1920.1680.0.1";
 - type=list(string), description="список ip-адресов" — проверка, что все адреса верны. Тесты:  ["192.168.0.1", "1.1.1.1", "127.0.0.1"] и ["192.168.0.1", "1.1.1.1", "1270.0.0.1"].
@@ -73,29 +73,35 @@ TFLint:
 
 ## Дополнительные задания (со звёздочкой*)
 
-**Настоятельно рекомендуем выполнять все задания со звёздочкой.** Их выполнение поможет глубже разобраться в материале.   
-Задания со звёздочкой дополнительные, не обязательные к выполнению и никак не повлияют на получение вами зачёта по этому домашнему заданию. 
 ------
 ### Задание 5*
 1. Напишите переменные с валидацией:
 - type=string, description="любая строка" — проверка, что строка не содержит символов верхнего регистра;
 - type=object — проверка, что одно из значений равно true, а второе false, т. е. не допускается false false и true true:
 ```
+variable "lowercase" {
+  description = "Uppercase is wrong"
+  type        = string
+  default     = "qwertyuiop"
+  validation {
+    condition     = can(regex("^[a-z]+$", var.lowercase))
+    error_message = "Uppercase in the string"
+  }
+}
+
 variable "in_the_end_there_can_be_only_one" {
     description="Who is better Connor or Duncan?"
     type = object({
         Dunkan = optional(bool)
         Connor = optional(bool)
     })
-
     default = {
         Dunkan = true
-        Connor = false
+        Connor = true
     }
-
     validation {
+        condition = var.in_the_end_there_can_be_only_one.Dunkan != var.in_the_end_there_can_be_only_one.Connor
         error_message = "There can be only one MacLeod"
-        condition = <проверка>
     }
 }
 ```
@@ -111,11 +117,4 @@ variable "in_the_end_there_can_be_only_one" {
 ### Задание 7*
 1. Настройте отдельный terraform root модуль, который будет создавать YDB, s3 bucket для tfstate и сервисный аккаунт с необходимыми правами. 
 
-### Правила приёма работы
-
-Ответы на задания и необходимые скриншоты оформите в md-файле в ветке terraform-05.
-
-В качестве результата прикрепите ссылку на ветку terraform-05 в вашем репозитории.
-
-**Важно.** Удалите все созданные ресурсы.
 
